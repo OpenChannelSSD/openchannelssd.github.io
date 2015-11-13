@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Open-Channel Solid State Drives : Opening up SSDs for everyone">
+    <meta name="description" content="Open-Channel Solid State Drives : Manage SSDs directly from your host">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/OpenChannelSSD">View on GitHub</a>
 
           <h1 id="project_title">Open-Channel Solid State Drives</h1>
-          <h2 id="project_tagline">Opening up SSDs for everyone</h2>
+          <h2 id="project_tagline">Manage SSDs directly from your host</h2>
 
         </header>
     </div>
@@ -27,25 +27,86 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome</h3>
+        <p>Open-channel SSDs are devices that share responsibilities with the host
+in order to implement and maintain features that typical SSDs keep
+strictly in firmware. These include (i) the Flash Translation Layer
+(FTL), (ii) bad block management, and (iii) hardware units such as the
+flash controller, the interface controller, and large amounts of flash
+chips. In this way, Open-channels SSDs can expose direct
+access to their physical flash storage, while keeping a subset of the
+internal features of SSDs.</p>
 
-<p>An Open-Channel Solid State Drive is an SSD that exposes the physical flash storage through the logical address space, while keeping a subset of the internal features of common SSDs. The Open-Channel SSD project is a set of kernel extensions and user-space libraries that allows kernel and applications to directly interact with SSDs.</p>
+<p>LightNVM is a specification that gives support to Open-channel SSDs.
+LightNVM allows the host to manage data placement, garbage collection,
+and parallelism. Device specific responsibilities such as bad block
+management, FTL extensions to support atomic IOs, or metadata
+persistence are still handled by the device.</p>
 
-<h3>
-<a id="subprojects" class="anchor" href="#subprojects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subprojects</h3>
+<p>The architecture of LightNVM consists of three parts: core, media managers and
+targets. The core implements shared functionality across targets. For example
+ initialization, teardown and statistics. The block manager implements management of flash blocks in the host, and at last the targets implement the
+interface that exposes physical flash to user-space applications.
+Examples of such targets include key-value store, object-store, as well
+as traditional block devices.</p>
 
-<p>Go to <a href="https://github.com/OpenChannelSSD">github</a> for all sub-projects.</p>
-
-<h3>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h3>
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
 <p>The documentation is available <a href="http://openchannelssd.readthedocs.org/en/latest/">here</a></p>
 
 <h2>
+<a id="subprojects" class="anchor" href="#subprojects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subprojects</h2>
+
+<p>Go to <a href="openchannelssd.github.io">github</a> for all sub-projects.</p>
+
+<p>The Open-Channel SSD support is divided into several pieces. Here is a short description of each project and how it relates.</p>
+
+<ul>
+<li>
+<p><strong>Linux Kernel Support</strong> (<a href="https://github.com/OpenChannelSSD/linux">https://github.com/OpenChannelSSD/linux</a>)</p>
+
+<p>Implements support for Open-Channel SSDs in the kernel. It is the core of identifying, managing, and using the Open-Channel SSDs.</p>
+</li>
+<li>
+<p><strong>LightNVM Management Tool</strong> (<a href="https://github.com/OpenChannelSSD/lightnvm-adm">https://github.com/OpenChannelSSD/lightnvm-adm</a>)</p>
+
+<p>Implements a management tool for managing the Open-Channel SSDs.</p>
+</li>
+<li>
+<p><strong>liblightnvm Library</strong> (<a href="https://github.com/OpenChannelSSD/liblightnvm">https://github.com/OpenChannelSSD/liblightnvm</a>)</p>
+
+<p>A library that abstracts the underlying "raw" Open-Channel SSD device and provides abstractions such as append only, bad block management, etc.</p>
+</li>
+<li>
+<p><strong>RocksDB Open-Channel SSD Support</strong> (<a href="https://github.com/OpenChannelSSD/rocksdb">https://github.com/OpenChannelSSD/rocksdb</a>)</p>
+
+<p>Implements support in RocksDB for directly accessing Open-Channel SSDs.   </p>
+</li>
+</ul>
+
+<h2>
+<a id="available-hardware" class="anchor" href="#available-hardware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available Hardware</h2>
+
+<p>A number of platforms supports LightNVM:</p>
+
+<ul>
+<li><p>CNEX Labs Westlake SDK.</p></li>
+<li><p>IIT Madras SSD Controller (<a href="https://bitbucket.org/casl/ssd-controller">https://bitbucket.org/casl/ssd-controller</a>). An open-source
+implementation of a NVMe controller in BlueSpec. Can run on Xilinx
+FPGA's such as Artix 7, Kintex 7, and Vertex 7.</p></li>
+<li><p>Multiple unreleased SSDs under development. They will be added here when announched.</p></li>
+<li><p>Other platform such as OpenSSD Jasmine and OpenSSD Cosmos are able to
+support LightNVM. However, there are no compatible firmwares yet.</p></li>
+</ul>
+
+<h2>
 <a id="specification" class="anchor" href="#specification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Specification</h2>
 
-<p>The interface specification is available as a google document <a href="http://goo.gl/BYTjLI">here</a></p>
+<p>We are actively creating a specification as more and more of the
+host/device interface is stabilized. Please see this Google document.
+It is open for comments.</p>
+
+<p>The specification is available as a google document <a href="http://goo.gl/BYTjLI">here</a></p>
       </section>
     </div>
 
@@ -56,7 +117,17 @@
       </footer>
     </div>
 
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-57193430-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
 
   </body>
 </html>
