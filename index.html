@@ -36,15 +36,15 @@ chips. In this way, Open-channels SSDs can expose direct
 access to their physical flash storage, while keeping a subset of the
 internal features of SSDs.</p>
 
-<p>LightNVM is a specification that gives support to Open-channel SSDs.
+<p>LightNVM is a subsystem that supports Open-channel SSDs.
 LightNVM allows the host to manage data placement, garbage collection,
 and parallelism. Device specific responsibilities such as bad block
 management, FTL extensions to support atomic IOs, or metadata
-persistence are still handled by the device.</p>
+persistence continues to be handled by the device.</p>
 
 <p>The architecture of LightNVM consists of three parts: core, media managers and
 targets. The core implements shared functionality across targets. For example
- initialization, teardown and statistics. The block manager implements management of flash blocks in the host, and at last the targets implement the
+ initialization, teardown and statistics. The media manager implements management of flash blocks in the host, and at last the targets implement the
 interface that exposes physical flash to user-space applications.
 Examples of such targets include key-value store, object-store, as well
 as traditional block devices.</p>
@@ -68,7 +68,7 @@ as traditional block devices.</p>
 <p>Implements support for Open-Channel SSDs in the kernel. It is the core of identifying, managing, and using the Open-Channel SSDs.</p>
 </li>
 <li>
-<p><strong>LightNVM Management Tool</strong> (<a href="https://github.com/OpenChannelSSD/lightnvm-adm">https://github.com/OpenChannelSSD/lightnvm-adm</a>)</p>
+<p><strong>LightNVM Management Tool</strong> (<a href="https://github.com/OpenChannelSSD/lnvm">https://github.com/OpenChannelSSD/lightnvm-adm</a>)</p>
 
 <p>Implements a management tool for managing the Open-Channel SSDs.</p>
 </li>
@@ -90,6 +90,7 @@ as traditional block devices.</p>
 <p>A number of presentations on LightNVM have been given:</p>
 
 <ul>
+<li><p>Open-Channel SSDs: LinuxCon Vault 2016 (<a href="http://events.linuxfoundation.org/sites/events/files/slides/Vault2016-Website.pdf">Link</a>).</p></li>
 <li><p>Open-Channel SSDs: LinuxCon North America 2015 (<a href="http://events.linuxfoundation.org/sites/events/files/slides/LinuxConNA2015-LightNVM.pdf">Link</a>).</p></li>
 <li><p>Towards Application Driven Storage: LinuxCon North America 2015 (<a href="http://events.linuxfoundation.org/sites/events/files/slides/LCE2015_RocksDB%2BLightNVM.pdf">Link</a>).</p></li>
 <li><p>Linux Kernel Abstractions for Open-Channel Solid State Drives: Non-Volatile Memory Workshop (NVMW) 2015 (<a href="http://nvmw.ucsd.edu/2015/assets/slides/14">Link</a>).</p></li>
