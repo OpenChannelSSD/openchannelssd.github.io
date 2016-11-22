@@ -67,13 +67,11 @@
 		<div class="col-md-4 thumb">
 			<a class="thumbnail" href="#"><img class="img-responsive" src="img/isolation.jpg" /></a>
 			<p>
-				<center><strong>Isolation</strong></center>
+				<strong>Isolation</strong>
 			<hr/>
 			</p>
 			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Morbi mi urna, vehicula sit amet maximus nec, sagittis
-			eget odio. Nunc in ex sed diam pellentesque consequat.
+			Provide end-to-end I/O isolation for your applications by physical partitioning
 			</p>
 		</div>
 		<div class="col-md-4 thumb">
@@ -83,22 +81,17 @@
 			</p>
 			<hr/>
 			<p>
-			Proin porttitor et nunc aliquet molestie. Curabitur
-			ornare molestie quam vitae varius. Cras cursus mauris
-			pharetra nisi faucibus accumsan eu ut nunc.
+			Know a priori how long an I/O will take. No more guessing for when an I/O returns.
 			</p>
 		</div>
 		<div class="col-md-4 thumb">
 			<a class="thumbnail" href="#"><img class="img-responsive" src="img/software_defined.jpg" /></a>
 			<p>
-			<strong>Software Defined NVM</strong>
+			<strong>Software Defined Non-Volatile Memory</strong>
 			<hr />
 			</p>
 			<p>
-			Pellentesque sagittis hendrerit vulputate. Donec vel
-			dolor urna. Vestibulum eu leo a ligula consectetur
-			iaculis. Morbi ligula neque, bibendum a gravida at,
-			bibendum sit amet erat.
+			Manage your non-volatile memory at the right layer in the operations, it being exposed as a block device, through a file-system or inside your application.
 			</p>
 		</div>
 		</div>
@@ -128,14 +121,14 @@
 			<ul>
 			<li>
 			<p>
-				<strong>LightNVM Open-Channel Specification</strong>
+				<strong>Open-Channel Solid State Drive Specification</strong>
 				<br/>
 				<a
 					href="docs/Open-ChannelSSDInterfaceSpecification12-final.pdf">Download</a> 1.2 final
 				<br/>
 				<a href="http://goo.gl/BYTjLI">Access</a> current work-in-progress edition
 				<br/>
-				The LightNVM Open-Channel specification is an Open Standard, aiming to incorporate the needs of designers, implementers, and users of Non-Volatile Memory devices as well as the software driving them.
+				The LightNVM Open-Channel specification is an open standard, aiming to incorporate the needs of designers, implementers, and users of Open-Channel SSDs.
 			</p>
 			</p>
 			</li>
@@ -153,13 +146,11 @@
 			</li>
 			<li>
 			<p>
-				<strong>Nvme Cli</strong>
+				<strong>nvme-cli</strong>
 				<br/>
 				<a href="https://github.com/linux-nvme/nvme-cli">https://github.com/linux-nvme/nvme-cli</a>
 				<br/>
-				Standard toolchains can be used to manage
-				Open-Channel SSDs, e.g.  nvme-cli to initialize,
-				partition, factory reset, etc. your device.
+				Open-Channel SSD management available through standardilized cli tools.
 			</p>
 			</li>
 			<li>
@@ -168,10 +159,7 @@
 				<br/>
 				<a href="https://github.com/OpenChannelSSD/liblightnvm">https://github.com/OpenChannelSSD/liblightnvm</a>
 				<br/>
-				A library that abstracts the underlying "raw"
-				Open-Channel SSD device and provides
-				abstractions such as append only, bad block
-				management, etc.
+				Integrate Open-Channel SSDs into your applications using liblightnvm. It simplifies developments and enable one to use predefined data striping techniques.
 			</p>
 			</li>
 			<li>
@@ -185,7 +173,7 @@
 			</li>
 			</ul>
 			
-			<a href="https://github.com/OpenChannelSSD" class="btn btn-default btn-lg">Visit GitHub for all sub-projects</a>
+			<a href="https://github.com/OpenChannelSSD" class="btn btn-default btn-lg">Visit GitHub to see all projects</a>
 		</div>
 	</div>
 	</div>
@@ -198,9 +186,7 @@
 		<h2>Publications</h2>
 		<p>Papers and talks descriping Open-Channel SDDs and the
 			LightNVM implementation are available in published
-			papers and talks given at workshops and conferences
-		around the world. These are listed below in chronological
-		order.
+			papers and talks.
 
 		<ul>
 			<li>
@@ -249,7 +235,7 @@
 				<strong>Linux Kernel Abstractions for Open-Channel Solid State Drives</strong>
 				<br/>
 				Talk given at the Non-Volatile Memories
-				Workshops 2015 (<a href="http://nvmw.ucsd.edu/2015/program">NVMW15</a>).
+				Workshops 2015 (<a href="http://nvmw.ucsd.edu/2015/program">NVMW '15</a>).
 			</p>
 			</li>
 		</ul>
@@ -265,16 +251,15 @@
 	<div class="col-lg-9 col-lg-offset-1">
 		<h2>Hardware</h2>
 		<p>
-		Open-ChannelSSDs are an emerging technology which is already
-		available in a range of different hardware implementations. See
-		the list below for examples:
+		Open-ChannelSSDs are an emerging technology which is
+		available from various vendors
 		<ul>
 			<li>
 			<p>
 				<a href="http://www.cnexlabs.com" target="_blank">CNEX Labs Westlake SDK.</a>
 				<br/>
-				LightNVM SDK may be ordered for academical
-				purposes. Please write to matias@cnexlabs.com
+				LightNVM SDK may be ordered for academic
+				purposes. Please write to <a href="mailto:matias@cnexlabs.com">matias@cnexlabs.com</a> 
 				with your research description and inquire for
 				availability.
 			</p>
@@ -314,14 +299,13 @@
 
 			<li>
 			<p>
-				Other platform such as <a href="http://www.openssd-project.org/wiki/Jasmine_OpenSSD_Platform">OpenSSD Jasmine</a> and <a href="http://www.openssd-project.org/wiki/Cosmos_OpenSSD_Platform">OpenSSD Cosmos</a> are able to support LightNVM. However, there are no compatible firmwares yet.
+				
 			</p>
 			</li>
 		</ul>
 
 		<p>
-		Multiple unreleased SSDs are under development. They will be
-		added here when announched.
+		Please send a pull request to add other supported platforms.
 		</p>
 	</div>
 	</div>
@@ -341,7 +325,7 @@
 		discuss it with us on IRC.
 		You are also welcome to send your input, comments and suggestions to LightNVM Principal Architect Matias Bjørling at email matias@cnexlabs.com.
 		</p>
-		<p>May the source be with you.</p>
+		
 
 	</div>
 	</div>
