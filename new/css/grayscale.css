@@ -127,7 +127,8 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     margin-bottom: 0;
-    color: #4286f4;
+    background-color: #4286f4;
+    color: #000;
 }
 
 .intro-body {
