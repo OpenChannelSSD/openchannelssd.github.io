@@ -65,6 +65,7 @@ a:focus {
 
 .navbar-brand {
     font-weight: 700;
+    color: #fff;
 }
 
 .navbar-brand:focus {
@@ -72,7 +73,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #0072c4;
+    color: #fff;
 }
 
 .navbar-custom .nav li a {
@@ -112,7 +113,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #000;
+        background-color: #2978A3;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -127,7 +128,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     margin-bottom: 0;
-    background-color: #4286f4;
+    background-color: #49A5D6;
     color: #000;
 }
 
@@ -139,7 +140,26 @@ a:focus {
 .intro-text {
     font-size: 18px;
     text-align: center;
+    color: #fff;
 }
+
+.thumbnail {
+    all: initial;
+    display: block;
+    margin-bottom: 20px;
+}
+
+section.intro p:first-of-type {
+	font-size: 22px;
+	text-align: center;
+	color: #fff;
+}
+
+section.intro p {
+	font-size: 18px;
+	color: #fff;
+}
+
 
 .brand-heading {
     font-size: 40px;
