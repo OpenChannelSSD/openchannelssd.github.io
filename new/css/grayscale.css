@@ -40,9 +40,9 @@ p {
 
 a {
     color: #28c3ab;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 a:hover,
@@ -186,9 +186,9 @@ a:focus {
 
 .page-scroll .btn-circle i.animated {
     -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1.5s;
+    -webkit-transition-duration: 0.5s;
     -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1.5s;
+    -moz-transition-duration: 0.5s;
     /* This used to be on hover.
 }
 
@@ -196,8 +196,8 @@ a:focus {
 	*/
     -webkit-animation-name: pulse;
     -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
