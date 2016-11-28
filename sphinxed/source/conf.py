@@ -39,8 +39,11 @@ extensions = [
     'breathe'
 ]
 
-breathe_projects = { "LightNVM": "doxyxml/" }
+breathe_projects = { "LightNVM": "/home/safl/git/liblightnvm/build/docs/xml" }
 breathe_default_project = "LightNVM"
+breathe_domain_by_extension = {
+    "h" : "c",
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -228,7 +231,8 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {'sidebar': ['localtoc.html', 'sourcelink.html',
+'searchbox.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

@@ -50,7 +50,7 @@ help:
 
 .PHONY: view
 view:
-	xdg-open $(BUILDDIR)/html/index.html
+	xdg-open $(BUILDDIR)/html/sidebar.html
 
 .PHONY: clean
 clean:
