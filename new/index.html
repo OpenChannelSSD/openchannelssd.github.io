@@ -67,10 +67,10 @@
 		<div class="col-md-4 thumb">
 			<span class="glyphicon glyphicon-tasks" aria-hidden="true" style="font-size:150px;color:#C5E0DC;text-shadow: 2px 3px 3px #292929;letter-spacing: -7px;"></span>
 			<p>
-				<strong>Strict I/O Isolation</strong>
+				<strong>I/O Isolation</strong>
 			</p>
 			<hr/>
-			<p>Provide end-to-end IO isolation by physical partitioning.</p>
+			<p class="text-justified">Enable I/O isolation between tenants by allocating your SSD into separate parallel units.</p>
 		</div>
 		<div class="col-md-4 thumb">
 			<span class="glyphicon glyphicon-time" aria-hidden="true" style="font-size:150px;color:#C5E0DC;text-shadow: 2px 3px 3px #292929;letter-spacing: -7px;"></span>
@@ -78,8 +78,8 @@
 			<strong>Predictable Latency</strong>
 			</p>
 			<hr/>
-			<p>
-			No more guessing for when an IO completes. Perform data placement optimized for your workloads.
+			<p class="text-justified">
+			No more guessing when an IO completes. You know which parallel unit is accessed on disk.
 			</p>
 		</div>
 		<div class="col-md-4 thumb">
@@ -88,8 +88,8 @@
 			<strong>Software Defined NVM</strong>
 			</p>
 			<hr />
-			<p style="text-align: top">
-			Manage your non-volatile memory as a block device, through a file-system or inside your application. Eliminate device DRAM in the progress.
+			<p class="text-justified">
+			Manage your non-volatile memory as a block device, through a file-system or inside your application.
 			</p>
 		</div>
 		</div>
@@ -112,8 +112,10 @@
 				system support, user space management tools, I/O
 				libraries, to examples of their use.
 			</p>
-			
-			<a href="https://openchannelssd.readthedocs.io/en/latest/gettingstarted" class="btn btn-default btn-lg">Getting Started</a>
+
+			<div class="col-md-4"><a href="https://openchannelssd.readthedocs.io/en/latest/gettingstarted" class="btn btn-default btn-lg" target="_new">Getting Started</a></div>
+			<div class="col-md-4"><a href="https://openchannelssd.readthedocs.io/en/latest/" class="btn btn-default btn-lg" target="_new">Documentation</a></div>
+			<div class="col-md-4"><a href="http://lightnvm.io/liblightnvm/" class="btn btn-default btn-lg" target="_new">liblightnvm</a></div>
 			<p></p>
 			<ul>
 			<li>
@@ -186,6 +188,12 @@
 			papers and talks.
 
 		<ul>
+			<li>
+			<p>
+				<strong>LightNVM: The Linux Open-Channel SSD Subsystem</strong>
+				<br/>
+				To be presented at FAST '17
+			</p>
 			<li>
 			<p>
 				<strong>LightNVM Brings Open-Channel SSDs to the Linux Kernel</strong>
