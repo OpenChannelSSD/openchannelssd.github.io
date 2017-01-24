@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightNVM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean1.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">LightNVM </a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li role="presentation"><a href="#documentation">Documentation</a></li>
+                        <li role="presentation"><a href="#pubs">Publications </a></li>
+                        <li role="presentation"><a href="#hardware">Hardware </a></li>
+                        <li role="presentation"><a href="#getinvolved">Get Involved</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="features-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Open-Channel SSDs</h2></div>
+            <div class="row features">
+                <div class="col-md-4 col-sm-6 item"><i class="glyphicon glyphicon-tasks icon"></i>
+                    <h3 class="name">I/O Isolation</h3>
+                    <p class="description">Enable I/O isolation between tenants by allocating your SSD into separate parallel units. </p>
+                </div>
+                <div class="col-md-4 col-sm-6 item"><i class="glyphicon glyphicon-time icon"></i>
+                    <h3 class="name"><strong>Predictable Latency</strong> </h3>
+                    <p class="description">No more guessing when an IO completes. You know which parallel unit is accessed on disk. </p>
+                </div>
+                <div class="col-md-4 col-sm-6 item"><i class="glyphicon glyphicon-road icon"></i>
+                    <h3 class="name"><strong>Non-Volatile Memory</strong></h3>
+                    <p class="description">Manage your non-volatile memory as a block device, through a file-system or inside your application.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="documentation" class="highlight-clean" style="background-color:#eaeaea;">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Documentation </h2>
+                <p class="text-center">LightNVM is a full-stack initiative from interface specification, operating system support, user-space management tools, I/O libraries, to examples of their use.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="buttons"><a class="btn btn-primary btn-block" role="button" href="https://openchannelssd.readthedocs.io/en/latest/" target="_blank">Introduction </a></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="buttons"><a class="btn btn-primary btn-block" role="button" href="https://openchannelssd.readthedocs.io/en/latest/gettingstarted" target="_blank">Getting started</a></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="buttons"><a class="btn btn-primary btn-block" role="button" href="http://lightnvm.io/liblightnvm/" target="_blank">liblightnvm </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pubs" class="highlight-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Publications &amp; Presentations</h2>
+                <p class="text-center">Selected publications and talks using the LightNVM subsystem</p>
+            </div>
+            <div class="buttons">
+                <ul class="list-group">
+                    <li class="list-group-item"><span><strong>2017 </strong></span>
+                        <ul class="list-unstyled">
+                            <li>LightNVM: The Linux Open-Channel SSD Subsystem - 15th USENIX Conference on File and Storage Technologies (FAST) (<a href="https://www.usenix.org/conference/fast17/technical-sessions/presentation/bjorling" target="_blank">Link</a>)</li>
+                            <li>Multi-Tenant I/O Isolation for Open-Channel SSDs - Non-Volatile Memory Workshop (<a href="http://nvmw.ucsd.edu/2017/" target="_blank">Link</a>)</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"><span><strong>2016 </strong> </span>
+                        <ul class="list-unstyled">
+                            <li>Open-Channel SSDs - LSF Vault (<a href="http://events.linuxfoundation.org/sites/events/files/slides/Vault2016-Website.pdf" target="_blank">Link</a>)</li>
+                            <li>Open-Channel SSDs - LinuxCon North America(<a href="http://events.linuxfoundation.org/sites/events/files/slides/LinuxConNA2015-LightNVM.pdf" target="_blank">Link</a>)</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"><span><strong>2015 </strong> </span>
+                        <ul class="list-unstyled">
+                            <li>Towards Application Driven Storage: LinuxCon North America (<a href="http://events.linuxfoundation.org/sites/events/files/slides/LCE2015_RocksDB%2BLightNVM.pdf" target="_blank">Link</a>)</li>
+                            <li>Linux Kernel Abstractions for Open-Channel Solid State Drives - Non-Volatile Memory Workshop (<a href="http://nvmw.ucsd.edu/2015/assets/slides/14" target="_blank">Link</a>)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="hardware" class="highlight-clean" style="background-color:#eaeaea;">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Available Hardware </h2>
+                <p class="text-center">Open-Channel SSD hardware available or announched.</p>
+            </div>
+            <div class="buttons">
+                <ul class="list-group">
+                    <li class="list-group-item"><span><strong>Software Development Kits</strong></span>
+                        <ul class="list-unstyled">
+                            <li>CNEX Labs - Westlake SDK (<a href="http://www.cnexlabs.com/" target="_blank">Link</a>)</li>
+                            <li>EMC Dragon Fire Board Open-Channel OX Controller (<a href="https://github.com/DFC-OpenSource/ox-ctrl" target="_blank">Link</a>)</li>
+                            <li>Radian Memory Systems RMS-325 (<a href="http://www.radianmemory.com/edge-card-ssd-rms-325/" target="_blank">Link</a>)</li>
+                            <li>OpenSSD Cosmos+ (<a href="http://www.openssd-project.org/wiki/Cosmos_OpenSSD_Platform" target="_blank">Link</a>) - Firmware implementation under development</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="getinvolved" class="highlight-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Get Involved</h2>
+                <p class="text-center">The Open-Channel SSD community is made up of individuals, researchers and companies that each utilize Open-Channel SSDs in their work. We welcome anyone who would like to get involved in the project.</p>
+            </div>
+            <div class="buttons">
+                <ul class="list-group">
+                    <li class="list-group-item"><span><strong>LightNVM Subsystem General</strong></span>
+                        <ul class="list-unstyled">
+                            <li>If you would like to contribute code to the LightNVM subsystem in the Linux kernel. Please visit our Github Linux kernel repository. </li>
+                            <li> <a href="https://github.com/OpenChannelSSD/linux" target="_blank">Github</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"><span><strong>liblightnvm </strong> </span>
+                        <ul class="list-unstyled">
+                            <li>If you would like to build integrate your application with Open-Channel SSDs, and/or loves to write library code. This is the place.</li>
+                            <li><a href="https://github.com/OpenChannelSSD/liblightnvm" target="_blank">Github </a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"><span><strong>IRC &amp; Mailing Lists</strong> </span>
+                        <ul class="list-unstyled">
+                            <li>We hang out on <strong>Freenode (irc.freenode.org) #lightnvm</strong> channel</li>
+                            <li>Any questions about the subsystem and help may be directed at the Github Linux and liblightnvm repositories</li>
+                            <li><a href="https://github.com/OpenChannelSSD/linux" target="_blank">Github Linux</a> | <a href="https://github.com/OpenChannelSSD/liblightnvm" target="_blank">Github liblightnvm</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-clean" style="background-color:#4b4b4b;">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-right" style="color:#fff;"><strong>2017 LightNVM</strong></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
